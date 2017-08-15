@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+        (function(){
+            var html = document.documentElement;
+            var hWidth = html.getBoundingClientRect().width;
+            html.style.fontSize = hWidth/20 + "px";
+        })();
+    </script>
+</head>
+<body>
+<div class="footer">
+    <div class="footer_top">
+        <div class="item">
+            <img src="images/index_102.jpg" alt="">
+            <p>关注官方微信</p>
+        </div>
+        <div class="item">
+            <img src="images/index_102.jpg" alt="">
+            <p>关注官方微信</p>
+        </div>
+        <p>Copyright©2011 仕馨月子会所 (粤ICP备17008523号-1)</p>
+    </div>
+    <div class="footer_nav">
+        <div class="container">
+            <div class="item">
+                <img src="images/index_112.png" alt="">
+                <span>联系电话</span>
+            </div>
+            <div class="item">
+                <img src="images/index_109.png" alt="">
+                <span>预约看点</span>
+            </div>
+            <div class="item toggle">
+                <img src="images/index_115.png" alt="">
+                <span>导航</span>
+            </div>
+        </div>
+        <div data-value="0" class="toggle_layout nav">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_10.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/index_03.png" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script>
+    var $toggle = $(".footer .toggle");
+    var $toggleLayout = $(".footer .toggle_layout");
+    $toggle.click(function(){
+        if($toggleLayout.data("value") == 0){
+            $toggleLayout.css({
+                display: "block",
+                animation: "footer1 1.5s ease both"
+            });
+            $toggleLayout.data("value", "1");
+        }else{
+            $toggleLayout.css({
+                animation: "footer2 1.5s ease both",
+                display: "none"
+            });
+            $toggleLayout.data("value", "0");
+        }
+    })
+</script>
